@@ -7,6 +7,6 @@ class BaseController extends Controller
 {
     public function actionTest()
     {
-        return 1;
+        return 'test';
     }
 }

@@ -18,6 +18,6 @@ class BaseController extends Controller
             '请求banner不存在',
             40000
         );
-        return 'test';
+        return '1';
     }
 }

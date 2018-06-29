@@ -24,7 +24,7 @@ class m180621_023107_create_wyc_admin_table extends Migration
             'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('管理员状态'),
             'create_at' => $this->dateTime()->notNull()->defaultValue("1000-01-01 00:00:00")->comment('管理员创建时间'),
             'last_login_at' => $this->dateTime()->notNull()->defaultValue("1000-01-01 00:00:00")->comment('管理员最后登陆时间'),
-            'update_at' => $this->dateTime()->notNull()->defaultValue('1000-01-01 00:00:00')->append('ON UPDATE CURRENT_TIMESTAMP')->comment('管理员最后登陆时间')
+            'update_at' => $this->dateTime()->notNull()->defaultValue('1000-01-01 00:00:00')->append('ON UPDATE CURRENT_TIMESTAMP')->comment('管理员更新时间')
         ], $tableOptions);
     }
 

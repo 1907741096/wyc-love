@@ -22,7 +22,7 @@ class MenuController extends BaseController
      */
     public function actionAll()
     {
-        $data = (new MenuService())->getMenu($params);
+        $data = (new MenuService())->getMenu();
         return self::success($data);
     }
 }

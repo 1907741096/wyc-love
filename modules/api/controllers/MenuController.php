@@ -12,7 +12,7 @@ class MenuController extends BaseController
      */
     public function actionFind()
     {
-        $params = $this->getParam();
+        $params = $this->getParam('menu_id');
         $data = (new MenuService())->getMenu($params);
         return self::success($data);
     }
@@ -22,7 +22,6 @@ class MenuController extends BaseController
      */
     public function actionAll()
     {
-        $params = $this->getParam();
         $data = (new MenuService())->getMenu($params);
         return self::success($data);
     }

@@ -1,17 +1,15 @@
 <?php
 
 
-namespace common\mysql;
+namespace app\common\mysql;
 
 use Yii;
 use yii\db\ActiveRecord;
-use yii\db\QueryTrait;
 use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 class BaseDao extends ActiveRecord
 {
-    use QueryTrait;
 
     private $_asArray = false;
 

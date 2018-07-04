@@ -1,6 +1,6 @@
 <?php
 
-namespace common\consts;
+namespace app\common\consts;
 
 /**
  * 错误定义类
@@ -10,12 +10,11 @@ class Error
 {
     const NO_ERROR                                      =   0; //正确，无异常
     const FAIL                                          =   1; //失败
-    const SYSTEM_ERROR                                  =   -1; //系统异常
-    const ERROR                                         =   -2; //接口异常
-    const DATA_EMPTY                                    =   -3; //接口数据为空
-    const ERROR_API_ENV                                 =   -4; //API环境关闭
-    const ERROR_SAVE                                    =   1000;  //保存错误
-    const ERROR_PARAMS                                  =   10000; //参数错误
+
+    public static $msg = [
+        self::NO_ERROR                                  =>  '成功',
+        self::FAIL                                      =>  '失败',
+    ];
 
     /**
      * 根据定义的错误码来显示错误消息，支持sprintf来渲染参数

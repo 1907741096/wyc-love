@@ -4,7 +4,7 @@ namespace app\modules\api\controllers;
 
 use yii\web\Controller;
 use yii\base\UserException;
-use common\consts\Error;
+use app\common\consts\Error;
 
 class BaseController extends Controller
 {
@@ -72,7 +72,7 @@ class BaseController extends Controller
         $return = [
             'code'      => Error::NO_ERROR,
             'message'   => isset($message) ? $message : Error::$msg[Error::NO_ERROR],
-            'data'      => isset($data) ? $data : new ArrayObject(),
+            'data'      => isset($data) ? $data : [],
         ];
 
         return $return;
@@ -90,7 +90,7 @@ class BaseController extends Controller
         $return = [
             'code'      => $code,
             'message'   => NULL !== $message ? $message : Error::$msg[$code],
-            'data'      => NULL !== $data ? $data : new ArrayObject(),
+            'data'      => NULL !== $data ? $data : [],
         ];
 
         return $return;

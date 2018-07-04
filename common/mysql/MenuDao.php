@@ -1,8 +1,8 @@
 <?php
 
-namespace common\mysql;
+namespace app\common\mysql;
 
-use common\mysql\BaseDao;
+use app\common\mysql\BaseDao;
 
 class MenuDao extends BaseDao{
     
@@ -11,6 +11,6 @@ class MenuDao extends BaseDao{
      */
     public static function tableName()
     {
-        return 'wyc_menu';
+        return "{{%menu}}";
     }
 }

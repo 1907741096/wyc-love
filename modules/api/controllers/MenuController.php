@@ -2,8 +2,7 @@
 
 namespace app\modules\api\controllers;
 
-use yii\web\Controller;
-use modules\api\services\MenuService;
+use app\common\services\MenuService;
 
 class MenuController extends BaseController
 {
@@ -12,8 +11,8 @@ class MenuController extends BaseController
      */
     public function actionFind()
     {
-        $params = $this->getParam('menu_id');
-        $data = (new MenuService())->getMenu($params);
+        $menu_id = $this->getparams('menu_id');
+        $data = (new MenuService())->getMenuById($menu_id);
         return self::success($data);
     }
 
@@ -22,7 +21,7 @@ class MenuController extends BaseController
      */
     public function actionAll()
     {
-        $data = (new MenuService())->getMenu();
+        $data = (new MenuService())->getAllMenu();
         return self::success($data);
     }
 }

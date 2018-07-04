@@ -49,7 +49,12 @@ $config = [
             'rules' => [
             ],
         ],
+        'response' => [
+            'format' => yii\web\Response::FORMAT_JSON,
+            'charset' => 'UTF-8',
+        ],
     ],
+    
     'modules' => [
         'api' => [
             'class' => app\modules\api\api::class

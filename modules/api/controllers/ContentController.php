@@ -11,10 +11,20 @@ class ContentController extends BaseController
      */
     public function actionGetContent()
     {
-        $menu_id = $this->getparams('menu_id');
-        $offset = $this->getparams('offset');
-        $limit = $this->getparams('limit');
+        $menu_id = $this->getParam('menu_id');
+        $offset = $this->getParam('offset');
+        $limit = $this->getParam('limit');
         $data = (new ContentService())->getContent($menu_id, $offset, $limit);
+        return self::success($data);
+    }
+
+    /**
+     * 根据内容id获取具体内容
+     */
+    public function actionFind()
+    {
+        $content_id = $this->getParam('content_id');
+        $data = (new ContentService())->getContentById($content_id);
         return self::success($data);
     }
 }

@@ -11,7 +11,7 @@ class MenuController extends BaseController
      */
     public function actionFind()
     {
-        $menu_id = $this->getparams('menu_id');
+        $menu_id = $this->getParam('menu_id');
         $data = (new MenuService())->getMenuById($menu_id);
         return self::success($data);
     }

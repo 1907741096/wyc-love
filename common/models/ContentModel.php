@@ -3,17 +3,19 @@
 namespace app\common\models;
 use app\common\mysql\ContentDao;
 
-class MenuModel{
+class ContentModel{
 
-    public function selectAllContent()
+    public function selectAllContent($where, $offset, $limit)
     {
-        return MenuDao::find()
+        return ContentDao::find()
             ->where($where)
+            ->limit($limit)
+            ->offset($offset)
             ->all();
     }
 
-    public function findMenuByContentId($id)
+    public function findContentByContentId($id)
     {
-        return MenuDao::findOne($id);
+        return ContentDao::findOne($id);
     }
 }

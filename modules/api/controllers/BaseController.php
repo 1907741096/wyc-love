@@ -5,6 +5,7 @@ namespace app\modules\api\controllers;
 use yii\web\Controller;
 use yii\base\UserException;
 use app\common\consts\Error;
+use Yii;
 
 class BaseController extends Controller
 {

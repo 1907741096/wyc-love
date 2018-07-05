@@ -13,7 +13,7 @@ class ContentService{
     {
         $where = [];
         $where['status'] = 1;
-        $data = (new ContentModel())->selectAllMenu($where);
+        $data = (new ContentModel())->selectAllContent($where, $offset, $limit);
         return $data;
     }
 

@@ -6,6 +6,9 @@ use app\common\models\MenuModel;
 
 class MenuService{
 
+    const OPEN_STATIC = 1;
+    const CLOSE_STATIC = 0;
+
     /**
      * 获取全部开启菜单
      */

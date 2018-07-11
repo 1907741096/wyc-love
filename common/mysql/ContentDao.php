@@ -7,6 +7,7 @@ use app\common\mysql\BaseDao;
 class ContentDao extends BaseDao{
     
     /**
+     * 表名
      * @inheritdoc
      */
     public static function tableName()

@@ -3,11 +3,11 @@
 namespace app\common\mysql;
 
 use app\common\mysql\BaseDao;
+use yii\db\ActiveRecord;
 
-class ContentDao extends BaseDao{
-    
+class ContentDao extends ActiveRecord
+{    
     /**
-     * 表名
      * @inheritdoc
      */
     public static function tableName()

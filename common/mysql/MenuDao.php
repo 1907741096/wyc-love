@@ -3,9 +3,10 @@
 namespace app\common\mysql;
 
 use app\common\mysql\BaseDao;
+use yii\db\ActiveRecord;
 
-class MenuDao extends BaseDao{
-    
+class MenuDao extends ActiveRecord 
+{
     /**
      * @inheritdoc
      */

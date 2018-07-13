@@ -14,9 +14,7 @@ class ContentService{
      */
     public function getContent($menu_id, $offset, $limit)
     {
-        $where = [];
-        $where['status'] = self::CLOSE_STATIC;
-        $data = (new ContentModel())->selectAllContent($where, $offset, $limit);
+        $data = (new ContentModel())->selectAllContent(self::OPEN_STATIC, $offset, $limit);
         return $data;
     }
 

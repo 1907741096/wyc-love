@@ -5,8 +5,9 @@ use app\common\mysql\MenuDao;
 
 class MenuModel{
 
-    public function selectAllMenu($where)
+    public function selectAllMenu($status)
     {
+        $where = ['=', 'status', $status];
         return MenuDao::find()
             ->where($where)
             ->all();

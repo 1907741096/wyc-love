@@ -14,9 +14,7 @@ class MenuService{
      */
     public function getAllMenu()
     {
-        $where = [];
-        $where['status'] = 1;
-        $data = (new MenuModel())->selectAllMenu($where);
+        $data = (new MenuModel())->selectAllMenu(self::CLOSE_STATIC);
         return $data;
     }
 

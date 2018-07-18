@@ -14,7 +14,7 @@ class ContentService{
      */
     public function getContent($menu_id, $offset, $limit)
     {
-        $data = (new ContentModel())->selectAllContent(self::OPEN_STATIC, $offset, $limit);
+        $data = (new ContentModel())->selectAllContent($menu_id, self::OPEN_STATIC, $offset, $limit);
         return $data;
     }
 

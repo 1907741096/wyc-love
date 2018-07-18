@@ -5,10 +5,15 @@ use app\common\mysql\ContentDao;
 
 class ContentModel{
 
-    public function selectAllContent($status, $offset, $limit)
+    public function selectAllContent($menu_id, $status, $offset, $limit)
     {
-        $where = ['=', 'status', $status];
+        $where = [
+            'and',
+            ['=', 'menu_id', $menu_id],
+            ['=', 'status', $status]
+        ];
         return ContentDao::find()
+            ->with('menus')
             ->where($where)
             ->limit($limit)
             ->offset($offset)

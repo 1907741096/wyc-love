@@ -14,7 +14,8 @@ class BaseController extends Controller
 
     public function init()
     {
-        
+        $response = Yii::$app->response;
+        $response->format = \yii\web\Response::FORMAT_JSON;
     }
 
     /**

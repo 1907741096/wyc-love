@@ -18,6 +18,7 @@ class m180629_070920_create_wyc_content_table extends Migration
         }
         $this->createTable('wyc_content', [
             'id' => $this->primaryKey()->comment('主键id'),
+            'menu_id' => $this->Integer()->notNull()->comment('菜单id'),
             'name' => $this->string(64)->comment('内容名称'),
             'address' => $this->string(64)->comment('内容地址'),
             'see' => $this->Integer()->notNull()->defaultValue(0)->comment('查看数'),

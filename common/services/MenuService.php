@@ -10,11 +10,20 @@ class MenuService{
     const CLOSE_STATIC = 0;
 
     /**
-     * 获取全部开启菜单
+     * 获取全部菜单
      */
     public function getAllMenu()
     {
-        $data = (new MenuModel())->selectAllMenu(self::CLOSE_STATIC);
+        $data = (new MenuModel())->selectAllMenu();
+        return $data;
+    }
+
+    /**
+     * 获取全部开启菜单
+     */
+    public function getAllOpenMenu()
+    {
+        $data = (new MenuModel())->selectAllMenu(self::OPEN_STATIC);
         return $data;
     }
 

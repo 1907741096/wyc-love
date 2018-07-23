@@ -5,14 +5,23 @@ use app\common\mysql\MenuDao;
 
 class MenuModel{
 
-    public function selectAllMenu($status)
+    /**
+     * 根据状态查询菜单
+     */
+    public function selectAllMenu($status = null)
     {
-        $where = ['=', 'status', $status];
+        $where = [];
+        if ($status != null) {
+            $where = ['=', 'status', $status];
+        }
         return MenuDao::find()
             ->where($where)
             ->all();
     }
 
+    /**
+     * 根据id查询菜单
+     */
     public function findMenuByMenuId($id)
     {
         return MenuDao::findOne($id);

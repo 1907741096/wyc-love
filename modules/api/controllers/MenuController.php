@@ -21,7 +21,7 @@ class MenuController extends BaseController
      */
     public function actionAll()
     {
-        $data = (new MenuService())->getAllMenu();
+        $data = (new MenuService())->getAllOpenMenu();
         return self::success($data);
     }
 }

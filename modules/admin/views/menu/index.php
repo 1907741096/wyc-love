@@ -44,7 +44,7 @@
               <td><?php echo $menu->id; ?></td>
               <td><?php echo $menu->name; ?></td>
               <td class="td-status">
-                <?php if($menu->status == 1): ?>
+                <?php if ($menu->status == 1): ?>
                   <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span>
                 <?php else: ?>
                   <span class="layui-btn layui-btn-danger layui-btn-mini">已禁用</span>

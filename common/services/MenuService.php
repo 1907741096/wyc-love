@@ -14,8 +14,9 @@ class MenuService{
      */
     public function getAllMenu()
     {
-        $data = (new MenuModel())->selectAllMenu();
-        return $data;
+        $menus = (new MenuModel())->selectAllMenu();
+        $result['menus'] = $menus;
+        return $result;
     }
 
     /**

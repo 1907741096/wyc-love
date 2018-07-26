@@ -9,7 +9,7 @@ class MenuController extends BaseController
     public function actionIndex()
     {
         $name = $this->getParam();
-        $offset = $this->
+        $offset = $this->getParam();
         $data = (new MenuService())->getAllMenu();
         return $this->render('index' ,['data' => $data]);
     }

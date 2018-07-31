@@ -1,3 +1,6 @@
+<?php
+  use yii\widgets\LinkPager;
+?>
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a>首页</a>
@@ -66,14 +69,7 @@
         </tbody>
       </table>
       <div class="page">
-        <div>
-          <a class="prev" href="">&lt;&lt;</a>
-          <a class="num" href="">1</a>
-          <span class="current">2</span>
-          <a class="num" href="">3</a>
-          <a class="num" href="">489</a>
-          <a class="next" href="">&gt;&gt;</a>
-        </div>
+        <?= LinkPager::widget(['pagination' => $pages]); ?>
       </div>
 
     </div>

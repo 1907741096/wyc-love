@@ -3,6 +3,7 @@
 namespace app\common\services;
 
 use app\common\models\MenuModel;
+use Yii;
 
 class MenuService{
 
@@ -12,9 +13,9 @@ class MenuService{
     /**
      * 获取全部菜单
      */
-    public function getAllMenu()
+    public function getAllMenu($name = '', $offset = 0)
     {
-        $menus = (new MenuModel())->selectAllMenu();
+        $menus = (new MenuModel())->selectAllMenu($name, $offset);
         $result['menus'] = $menus;
         return $result;
     }

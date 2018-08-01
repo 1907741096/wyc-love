@@ -7,6 +7,7 @@ use Yii;
 
 class MenuService{
 
+    
     const OPEN_STATIC = 1;
     const CLOSE_STATIC = 0;
 

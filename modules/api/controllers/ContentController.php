@@ -17,8 +17,7 @@ class ContentController extends BaseController
         $data = (new ContentService())->getContent($menu_id, $offset, $limit);
         return self::success($data);
     }
-    
-    
+
     /**
      * 根据内容id获取具体内容
      */

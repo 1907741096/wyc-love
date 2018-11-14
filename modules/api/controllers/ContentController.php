@@ -7,7 +7,7 @@ use app\common\services\ContentService;
 class ContentController extends BaseController
 {
     /**
-     * 根据菜单id及分页获取内容
+     * 根据菜单id及分页获取内容一天
      */
     public function actionGetContent()
     {
@@ -18,6 +18,7 @@ class ContentController extends BaseController
         return self::success($data);
     }
 
+    
     /**
      * 根据内容id获取具体内容
      */

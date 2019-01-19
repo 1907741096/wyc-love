@@ -16,7 +16,6 @@ class MenuController extends BaseController
         return self::success($data);
     }
 
-    
     /**
      * 获取所有菜单
      */

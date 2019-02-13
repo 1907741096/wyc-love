@@ -15,7 +15,6 @@ class MenuController extends BaseController
         $data = (new MenuService())->getMenuById($menu_id);
         return self::success($data);
     }
-
     
     /**
      * 获取所有菜单
